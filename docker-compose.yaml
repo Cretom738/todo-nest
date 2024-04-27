@@ -1,10 +1,10 @@
 version: "3.8"
 
 volumes:
-  db_volume:
+  todo-nest-db-volume:
 
 services:
-  db:
+  todo-nest-db:
     image: postgres
     restart: always
     environment:
@@ -12,7 +12,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
-      - db_volume:/var/lib/postgresql/data
+      - todo-nest-db-volume:/var/lib/postgresql/data
     ports: 
-      - ${POSTGRES_PORT:-5433}:5432
+      - ${POSTGRES_PORT:-5435}:5432
   
