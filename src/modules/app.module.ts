@@ -4,14 +4,14 @@ import { configSchema } from 'src/libs/config/config.schema';
 import { TasksModule } from './tasks/tasks.module';
 
 @Module({
-    imports: [
-        ConfigModule.forRoot({
-            isGlobal: true,
-            validationSchema: configSchema
-        }), 
-        TasksModule
-    ],
-    controllers: [],
-    providers: [],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      validationSchema: configSchema,
+    }),
+    TasksModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
